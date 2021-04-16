@@ -1,0 +1,175 @@
+2021-04-11 08:42:46,230 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-11 08:43:07,777 INFO werkzeug 127.0.0.1 - - [11/Apr/2021 08:43:07] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-11 08:43:08,026 INFO werkzeug 127.0.0.1 - - [11/Apr/2021 08:43:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-11 08:43:10,859 INFO werkzeug 127.0.0.1 - - [11/Apr/2021 08:43:10] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-11 08:43:13,132 INFO werkzeug 127.0.0.1 - - [11/Apr/2021 08:43:13] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-11 08:43:18,919 INFO werkzeug 127.0.0.1 - - [11/Apr/2021 08:43:18] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-11 08:43:22,054 INFO werkzeug 127.0.0.1 - - [11/Apr/2021 08:43:22] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-11 08:43:44,789 INFO werkzeug 127.0.0.1 - - [11/Apr/2021 08:43:44] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-11 08:43:45,032 INFO werkzeug 127.0.0.1 - - [11/Apr/2021 08:43:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 16:29:35,743 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 16:29:54,149 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:29:54] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:29:57,608 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:29:57] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:29:57,813 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:29:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 16:29:58,980 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:29:58] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-16 16:30:00,017 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:30:00] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 16:30:31,238 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:30:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 16:30:31,265 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:30:31] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:30:34,173 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:30:34] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:30:38,864 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:30:38] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-16 16:30:40,580 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:30:40] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:32:57,062 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 16:33:00,185 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:33:00] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:33:00,443 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:33:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 16:33:02,772 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:33:02] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 16:33:02,840 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:33:02] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:33:03,807 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:33:03] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-16 16:38:24,313 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 16:38:27,337 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:27] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-16 16:38:27,562 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 16:38:28,824 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:28] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 16:38:30,547 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 16:38:30,573 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:30] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:38:32,215 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:32] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:38:34,887 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:34] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 16:38:34,911 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:34] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:38:36,051 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:38:36] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-16 16:39:06,444 ERROR main Exception on /register [POST]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 105, in register
+    user = User(
+  File "<string>", line 4, in __init__
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\state.py", line 437, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\util\compat.py", line 198, in raise_
+    raise exception
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\state.py", line 434, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\sqlalchemy\orm\decl_base.py", line 1129, in _declarative_constructor
+    raise TypeError(
+TypeError: 'middle_name' is an invalid keyword argument for User
+2021-04-16 16:39:06,457 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:39:06] "[35m[1mPOST /register HTTP/1.1[0m" 500 -
+2021-04-16 16:40:20,231 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 16:40:21,884 ERROR main Exception on /register [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 129, in register
+    return render_template('register.html', title='Регистрация', form=form)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\GF63\PycharmProjects\shop_project\templates\register.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\GF63\PycharmProjects\shop_project\templates\base.html", line 28, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\GF63\PycharmProjects\shop_project\templates\register.html", line 26, in block "content"
+    {{ form.middle_name.label }}<br>
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: '__main__.RegisterForm object' has no attribute 'middle_name'
+2021-04-16 16:40:21,896 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:40:21] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+2021-04-16 16:40:23,460 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:40:23] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:40:24,539 ERROR main Exception on /register [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 129, in register
+    return render_template('register.html', title='Регистрация', form=form)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\GF63\PycharmProjects\shop_project\templates\register.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\GF63\PycharmProjects\shop_project\templates\base.html", line 28, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\GF63\PycharmProjects\shop_project\templates\register.html", line 26, in block "content"
+    {{ form.middle_name.label }}<br>
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: '__main__.RegisterForm object' has no attribute 'middle_name'
+2021-04-16 16:40:24,541 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:40:24] "[35m[1mGET /register HTTP/1.1[0m" 500 -
+2021-04-16 16:41:22,253 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 16:41:32,145 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:41:32] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:41:33,361 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:41:33] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-16 16:41:54,592 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:41:54] "[32mPOST /register HTTP/1.1[0m" 302 -
+2021-04-16 16:41:54,621 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:41:54] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 16:41:57,161 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:41:57] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 16:41:57,188 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:41:57] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:41:59,582 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:41:59] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:42:03,949 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:03] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-16 16:42:05,587 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:05] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:42:07,945 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:07] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 16:42:07,971 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:07] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:42:35,490 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 16:42:37,511 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:37] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 16:42:38,685 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 16:42:38,711 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:38] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:42:40,110 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:40] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:42:42,977 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:42] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 16:42:43,000 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:43] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:42:44,352 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:42:44] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 16:44:16,693 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:44:16] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 16:44:16,719 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:44:16] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:44:18,331 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:44:18] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:44:19,814 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:44:19] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 16:44:19,837 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:44:19] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:46:18,395 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 16:46:21,545 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:21] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:46:21,809 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 16:46:23,221 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:23] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 16:46:24,391 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:24] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 16:46:24,419 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:24] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:46:25,769 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:25] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:46:26,646 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:26] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 16:46:26,671 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:26] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:46:28,787 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:28] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-16 16:46:30,349 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:30] "[37mGET / HTTP/1.1[0m" 200 -

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1 align="center">Профиль</h1>
+  <h2 align="center">{{ current_user.name }}</h2>
+  {% if current_user.account_type == "Администратор" %}
+    <div>
+      <p>Заказы пользователей</p>
+      <p><a href="/logout">Выйти</a></p>
+    </div>
+  {% else %}
+    <div>
+      <p>Заказы</p>
+      <p><a href="/favourites">Избранное</a></p>
+      <p><a href="/logout">Выйти</a></p>
+    </div>
+  {% endif %}
+{% endblock %}
