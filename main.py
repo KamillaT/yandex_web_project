@@ -37,6 +37,16 @@ ADMINISTRATOR_PASSWORD_HASH = ''.join(ADMINISTRATOR_PASSWORD_HASH).split('==')[1
 config_file.close()
 
 
+def administrator_required(page_function):
+    def wrapped(*args):
+        if current_user.account_type != 'Администратор':
+            return redirect('/')
+        else:
+            page_function(*args)
+
+    return wrapped
+
+
 class LoginForm(FlaskForm):
     email = EmailField('Электронная почта', validators=[DataRequired()])
     password = PasswordField('Пароль', validators=[DataRequired()])
@@ -126,6 +136,17 @@ def register():
         session.commit()
         return redirect('/login')
     return render_template('register.html', title='Регистрация', form=form)
+
+
+@login_required
+@administrator_required
+@app.route('/user_orders')
+def view_user_orders():
+    session = db_session.create_session()
+    orders = session.query(Order).filter(Order.status.startswith('Ожидает отправки,')).all()
+    user_data = {order.id: session.query(User).filter(User.id == order.status.split('==')[1]).first()
+                 for order in orders}
+    return render_template('view_user_orders.html', orders=orders, user_data=user_data)
 
 
 @app.route('/user_profile')

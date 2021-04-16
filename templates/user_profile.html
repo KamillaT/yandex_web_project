@@ -4,7 +4,7 @@
   <h2 align="center">{{ current_user.name }}</h2>
   {% if current_user.account_type == "Администратор" %}
     <div>
-      <p>Заказы пользователей</p>
+      <p><a href="/user_orders">Заказы пользователей</a></p>
       <p><a href="/logout">Выйти</a></p>
     </div>
   {% else %}

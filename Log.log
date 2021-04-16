@@ -162,14 +162,50 @@ jinja2.exceptions.UndefinedError: '__main__.RegisterForm object' has no attribut
 2021-04-16 16:44:18,331 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:44:18] "[37mGET /user_profile HTTP/1.1[0m" 200 -
 2021-04-16 16:44:19,814 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:44:19] "[32mGET /logout HTTP/1.1[0m" 302 -
 2021-04-16 16:44:19,837 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:44:19] "[37mGET / HTTP/1.1[0m" 200 -
-2021-04-16 16:46:18,395 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
-2021-04-16 16:46:21,545 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:21] "[37mGET / HTTP/1.1[0m" 200 -
-2021-04-16 16:46:21,809 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2021-04-16 16:46:23,221 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:23] "[37mGET /login HTTP/1.1[0m" 200 -
-2021-04-16 16:46:24,391 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:24] "[32mPOST /login HTTP/1.1[0m" 302 -
-2021-04-16 16:46:24,419 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:24] "[37mGET / HTTP/1.1[0m" 200 -
-2021-04-16 16:46:25,769 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:25] "[37mGET /user_profile HTTP/1.1[0m" 200 -
-2021-04-16 16:46:26,646 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:26] "[32mGET /logout HTTP/1.1[0m" 302 -
-2021-04-16 16:46:26,671 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:26] "[37mGET / HTTP/1.1[0m" 200 -
-2021-04-16 16:46:28,787 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:28] "[37mGET /register HTTP/1.1[0m" 200 -
-2021-04-16 16:46:30,349 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:46:30] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:53:47,956 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 16:53:54,247 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:53:54] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:53:54,462 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:53:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 16:53:58,390 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:53:58] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-16 16:54:04,527 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:04] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 16:54:07,725 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 16:54:07,748 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:07] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:54:09,266 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:09] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:54:11,789 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:11] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 16:54:11,812 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:11] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:54:13,065 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:13] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 16:54:19,162 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 16:54:19,189 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:19] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 16:54:20,498 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:20] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:54:21,932 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:21] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-16 16:54:23,287 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:23] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 16:54:24,994 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:24] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 16:54:25,018 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 16:54:25] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:02:54,136 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 17:02:58,309 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:02:58] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:02:58,725 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:02:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 17:03:00,141 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:00] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-16 17:03:05,678 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:05] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 17:03:08,303 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 17:03:08,326 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:08] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:03:09,694 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:09] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 17:03:12,490 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:12] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 17:03:12,513 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:12] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:03:13,476 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:13] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 17:03:19,259 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 17:03:19,285 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:19] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:03:21,377 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:21] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 17:03:28,373 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-16 17:03:28,418 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:03:28] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:09:03,513 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 17:09:06,400 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:06] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:09:06,768 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 17:09:07,657 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:07] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-16 17:09:09,324 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-16 17:09:09,347 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:09] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:09:11,582 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:11] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-16 17:09:12,932 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:12] "[37mGET /user_orders HTTP/1.1[0m" 200 -
+2021-04-16 17:09:39,309 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-16 17:09:41,130 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:41] "[37mGET /user_orders HTTP/1.1[0m" 200 -
+2021-04-16 17:09:41,307 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:09:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-16 17:10:26,569 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:10:26] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-16 17:10:28,300 INFO werkzeug 127.0.0.1 - - [16/Apr/2021 17:10:28] "[37mGET /user_profile HTTP/1.1[0m" 200 -
