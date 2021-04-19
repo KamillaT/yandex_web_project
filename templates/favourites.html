@@ -1,4 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-  <h1 align="center">Избранное</h1>
+  <h1 align="center">Избранное</h1><br>
+  <a class="btn btn-primary" href='/user_profile'>Назад</a><br>
+  {% for cloth in cloths %}
+  <a class="buttons" href="/view{{ items.get_url() }}">
+      <div id="Item">
+          {{ cloth.title }}<br>
+          <img src="{{ items.get_images(False) }}"><br>
+          Цена: {{ items.price }} р.<br>
+          <a class="btn btn-primary " href="/order{{ items.get_url() }}">Добавить в заказ</a>
+          <a class="btn btn-primary " href="/favourites/delete{{ items.get_url() }}">Удалить из избранного</a>
+      </div>
+  </a>
+{% endfor %}
 {% endblock %}
