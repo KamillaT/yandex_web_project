@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+<h2>Регистрация заказа</h2>
+<h3>Просмотрите свои данные и исправьте, если они неверны</h3>
+<h3>Все пункты этой формы обязательны для заполнения</h3>
+    {% if err %}
+    <h3>Некоторые строки не заполнены или заполнены неправильно!</h3>
+    {% endif %}
+</center>
+<form action="" method="post" novalidate style="margin-left: 50px;">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.surname.label }}<br>
+        {{ form.surname(class="form-control") }}<br>
+        {% for error in form.surname.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(class="form-control") }}<br>
+        {% for error in form.name.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>
+        {{ form.email.label }}<br>
+        {{ form.email(class="form-control", type="email") }}<br>
+        {% for error in form.email.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>
+        {{ form.phone_number.label }}<br>
+        {{ form.phone_number(class="form-control") }}<br>
+        {% for error in form.phone_number.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p><p>
+    {{ form.address.label }}<br>
+    {{ form.address(class="form-control") }}<br>
+    {% for error in form.address.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>
+        {{ form.postal_code.label }}<br>
+        {{ form.postal_code(class="form-control") }}<br>
+        {% for error in form.postal_code.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+    </div>
+    {% endfor %}
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary", value="Подтвердить регистрацию заказа") }}</p>
+</form>
+{% endblock %}

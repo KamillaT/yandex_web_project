@@ -178,3 +178,210 @@ KeyError: 'Order'
 2021-04-19 19:41:05,545 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 19:41:05] "[37mGET /user_profile HTTP/1.1[0m" 200 -
 2021-04-19 19:41:06,837 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 19:41:06] "[32mGET /logout HTTP/1.1[0m" 302 -
 2021-04-19 19:41:06,860 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 19:41:06] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:04:55,852 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-19 20:05:04,699 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:05:04] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:05:04,825 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:05:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-19 20:05:07,320 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:05:07] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:05:07,574 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:05:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-19 20:07:24,058 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:24] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-19 20:07:34,822 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:34] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:07:37,121 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:37] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-19 20:07:38,246 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:38] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:07:39,793 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:39] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-19 20:07:44,562 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-19 20:07:44,571 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:44] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:07:48,636 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:48] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-19 20:07:55,120 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:55] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-19 20:07:56,339 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:56] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-19 20:07:57,888 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:07:57] "[33mGET /order HTTP/1.1[0m" 404 -
+2021-04-19 20:08:00,145 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:00] "[37mGET /user_orders HTTP/1.1[0m" 200 -
+2021-04-19 20:08:08,899 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:08] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-19 20:08:12,174 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:12] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:08:13,898 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:13] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-19 20:08:14,740 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:14] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-19 20:08:14,752 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:14] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:08:16,241 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:16] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-19 20:08:19,413 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-19 20:08:19,423 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:19] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-19 20:08:22,049 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:22] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-19 20:08:26,058 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:26] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-19 20:08:26,741 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:26] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-19 20:08:29,066 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:29] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-19 20:08:29,074 INFO werkzeug 127.0.0.1 - - [19/Apr/2021 20:08:29] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-21 19:05:33,927 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-21 19:05:53,172 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:05:53] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-21 19:05:53,366 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:05:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-21 19:06:06,653 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:06] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-21 19:06:10,247 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:10] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-21 19:06:10,994 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:10] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-21 19:06:14,302 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:14] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-21 19:06:14,316 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:14] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-21 19:06:15,852 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:15] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-21 19:06:21,598 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:21] "[37mGET /user_orders HTTP/1.1[0m" 200 -
+2021-04-21 19:06:27,534 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:27] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-21 19:06:30,009 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:30] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-21 19:06:30,019 INFO werkzeug 127.0.0.1 - - [21/Apr/2021 19:06:30] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-23 21:29:07,242 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-23 21:29:21,269 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:21] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-23 21:29:21,450 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-23 21:29:22,951 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:22] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-23 21:29:24,982 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:24] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-23 21:29:28,098 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:28] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-23 21:29:28,108 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:28] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-23 21:29:31,404 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:31] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-23 21:29:32,851 ERROR main Exception on /favourites [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 523, in view_favourites
+    return render_template('view_items_in_favourites.html', items=items)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: view_items_in_favourites.html
+2021-04-23 21:29:32,854 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:32] "[35m[1mGET /favourites HTTP/1.1[0m" 500 -
+2021-04-23 21:29:37,768 ERROR main Exception on /add_item [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 567, in add_item
+    return render_template('add_item.html', title='Добавление товара', form=form)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: add_item.html
+2021-04-23 21:29:37,769 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:37] "[35m[1mGET /add_item HTTP/1.1[0m" 500 -
+2021-04-23 21:29:41,810 ERROR main Exception on /add_item [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 567, in add_item
+    return render_template('add_item.html', title='Добавление товара', form=form)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: add_item.html
+2021-04-23 21:29:41,811 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:41] "[35m[1mGET /add_item HTTP/1.1[0m" 500 -
+2021-04-23 21:29:44,174 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:44] "[37mGET /user_orders HTTP/1.1[0m" 200 -
+2021-04-23 21:29:47,123 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:47] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-23 21:29:48,311 ERROR main Exception on /order [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 348, in view_order
+    items_id_in_order = order.items_id.split(DIVISOR)
+AttributeError: 'NoneType' object has no attribute 'items_id'
+2021-04-23 21:29:48,312 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:48] "[35m[1mGET /order HTTP/1.1[0m" 500 -
+2021-04-23 21:29:51,735 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:51] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-23 21:29:51,747 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:51] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-23 21:29:53,193 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:53] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-23 21:29:55,369 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:55] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-23 21:29:55,379 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:55] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-23 21:29:56,553 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:56] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-23 21:29:57,379 ERROR main Exception on /favourites [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 523, in view_favourites
+    return render_template('view_items_in_favourites.html', items=items)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: view_items_in_favourites.html
+2021-04-23 21:29:57,380 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:57] "[35m[1mGET /favourites HTTP/1.1[0m" 500 -
+2021-04-23 21:29:59,287 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:59] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-23 21:29:59,298 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:59] "[37mGET / HTTP/1.1[0m" 200 -

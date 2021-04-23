@@ -2,7 +2,7 @@
 {% block content %}
   <h1 align="center">Избранное</h1><br>
   <a class="btn btn-primary" href='/user_profile'>Назад</a><br>
-  {% for cloth in cloths %}
+  {% for item in temss %}
   <a class="buttons" href="/view{{ items.get_url() }}">
       <div id="Item">
           {{ cloth.title }}<br>

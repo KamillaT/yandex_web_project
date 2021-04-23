@@ -2,13 +2,15 @@
 import datetime
 import logging
 
+from PIL import Image
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from flask import Flask, redirect, render_template, request, abort, make_response, jsonify
 from werkzeug.security import check_password_hash
 from wtforms.fields.html5 import EmailField, SearchField
 from data import db_session, users, favourite
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField, IntegerField, SelectField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField, IntegerField, SelectField, FieldList, \
+    TextAreaField, MultipleFileField
 from wtforms.validators import DataRequired, Email
 import users_api
 from data.db_session import global_init, create_session
@@ -18,9 +20,8 @@ from data.favourite import FavouriteItems
 from data.items import Item
 from data.authors import Author
 from data.countries import Country
-import requests
-from requests import get, put
-import sys
+from requests import get, put, delete
+from data.validators import CheckStringFieldByDigit
 
 LOG_FILE = 'Log.log'  # имя файла с логами сервера
 CONFIG_FILE = 'config.txt'  # имя файла с настроками сайта
@@ -70,10 +71,10 @@ class SearchForm(FlaskForm):
     countries_length = session.query(Country).count()
     items_authors = {str(key_id): 0 for key_id in range(1, authors_length + 1)}
     items_countries = {str(key_id): 0 for key_id in range(1, countries_length + 1)}
-    cloths = session.query(Item).all()
-    for cloth in cloths:
-        item_authors = cloth.author_id.split(';')
-        items_country = cloth.country_id.split(';')
+    items = session.query(Item).all()
+    for item in items:
+        item_authors = item.author_id.split(';')
+        items_country = item.country_id.split(';')
         for _author in item_authors:
             items_authors[_author] += 1
         for _country in items_country:
@@ -86,6 +87,35 @@ class SearchForm(FlaskForm):
     country = SelectField('Страна', choices=countries, coerce=int)
     author = SelectField('Автор', choices=authors, coerce=int)
     submit = SubmitField('Найти')
+
+
+class OrderForm(FlaskForm):
+    count_list = FieldList(IntegerField('Количество (шт.)',
+                                        validators=[DataRequired(), CheckStringFieldByDigit()]))
+    submit = SubmitField('Перейте к оформлению заказа')
+
+
+class OrderRegistrationForm(FlaskForm):
+    surname = StringField('Фамилия', validators=[DataRequired()])
+    name = StringField('Имя', validators=[DataRequired()])
+    email = EmailField('Электронная почта', validators=[DataRequired(), Email()])
+    phone_number = StringField('Номер телефона', validators=[DataRequired()])
+    address = StringField('Адрес', validators=[DataRequired()])
+    postal_code = StringField('Почтовый индекс', validators=[DataRequired()])
+    submit = SubmitField('Подтвердить')
+
+
+class AddItemForm(FlaskForm):
+    DB_NAME = 'Main'
+    global_init(f'db/{DB_NAME}.sqlite')
+    session = create_session()
+    title = StringField('Название', validators=[DataRequired()])
+    description = TextAreaField('Описание', validators=[DataRequired()])
+    images = MultipleFileField('Фотографии')
+    price = IntegerField('Цена товара (за 1 шт.)', validators=[DataRequired()])
+    country = StringField('Страна', validators=[DataRequired()])
+    author = StringField('Автор', validators=[DataRequired()])
+    submit = SubmitField('Подтвердить')
 
 
 app = Flask(__name__)
@@ -107,13 +137,13 @@ def administrator_required(page_function):
     return wrapped
 
 
-def find_cloth_by_id(item_id):
+def find_item_by_id(item_id):
     session = db_session.create_session()
     item = session.query(Item).filter(Item.id == item_id).first()
     return item
 
 
-def find_cloths_by_id(items_id_str: list):
+def find_items_by_id(items_id_str: list):
     session = db_session.create_session()
     items = []
     for index in items_id_str:
@@ -121,6 +151,42 @@ def find_cloths_by_id(items_id_str: list):
         if item:
             items.append(item)
     return items
+
+
+def save_images(images: list):
+    try:
+        config_file = open(CONFIG_FILE, 'r', encoding='utf-8')
+        """Индекс последнего изображения в config-файле"""
+        index_data, other_data = list(), list()
+        for line in config_file.readlines():
+            if 'IMAGES_INDEX' in line:
+                index_data.append(line)
+            else:
+                other_data.append(line)
+        image_index = int(index_data[0].split('==')[1])
+        config_file.close()
+        for index, image in enumerate(images):
+            file = open(f'./static/img/item/image_{image_index}.png', 'wb')
+            file.write(image.stream.read())
+            file.close()
+            image = Image.open(f'./static/img/item/image_{image_index}.png')
+            image = image.resize((1024, 1024), Image.LANCZOS)
+            if index == 0:
+                image.save(f'./static/img/item/image_{image_index + 1}.png')
+                image = image.resize((256, 256), Image.LANCZOS)
+                image.save(f'./static/img/item/image_{image_index}.png')
+                image_index += 2
+            else:
+                image_index += 1
+        config_file = open(CONFIG_FILE, 'w', encoding='utf-8')
+        other_data.append(f'IMAGES_INDEX=={image_index}')
+        config_file.writelines(other_data)
+        config_file.close()
+        file_names = [f'/static/img/item/image_{image_index - i - 1}.png' for i in range(len(images) + 1)]
+    except Exception as error:
+        logging.error(error)
+        file_names = ['']
+    return list(reversed(file_names))
 
 
 @login_manager.user_loader
@@ -215,11 +281,6 @@ def user_profile():
     return render_template("user_profile.html", current_user=current_user)
 
 
-@app.route('/favourites')
-def favourites():
-    return render_template("favourites.html", current_user=current_user)
-
-
 @app.route('/', methods=['GET', 'POST'])
 def main_page(form_data=[]):
     session = db_session.create_session()
@@ -273,6 +334,297 @@ def main_page(form_data=[]):
     return render_template('main_page.html', items=items,
                            page_number=page_number, max_page_number=max_page_number,
                            form=search_form, email=administrator_email)
+
+
+@login_required
+@app.route('/order', methods=['GET', 'POST'])
+def view_order(form_data=[]):
+    form = OrderForm()
+    order_registration_form = OrderRegistrationForm()
+    need_count = request.args.get('count', default=False, type=bool)
+    confirm_order = request.args.get('confirm', default=False, type=bool)
+    session = db_session.create_session()
+    order = session.query(Order).filter(Order.id == current_user.order_id).first()
+    items_id_in_order = order.items_id.split(DIVISOR)
+    items = []
+    for index in items_id_in_order:
+        item = session.query(Item).filter(Item.id == index).first()
+        if item:
+            items.append(item)
+    length = list(range(len(items)))
+    if not form.count_list:
+        for i in length:
+            form.count_list.append_entry()
+    order_summ = 0
+    if need_count:
+        for index in range(len(items)):
+            if form.count_list[index].data:
+                order_summ += form.count_list[index].data * items[index].price
+    if form.validate_on_submit() and confirm_order:
+        form_data.append([entry.data for entry in form.count_list])
+        user = session.query(User).filter(User.id == current_user.id).first()
+        order_registration_form.surname.data = user.surname
+        order_registration_form.name.data = user.name
+        order_registration_form.email.data = user.email
+        order_registration_form.phone_number.data = user.phone_number
+        order_registration_form.address.data = user.address
+        order_registration_form.postal_code.data = user.postal_code
+        return render_template('order_registration.html', items=items, err=False,
+                               length=length, form=order_registration_form)
+    elif order_registration_form.is_submitted() and confirm_order:
+        if order_registration_form.validate_on_submit():
+            for index in range(len(items)):
+                items[index].length -= form_data[0][index]
+            order.status = f'Ожидает отправки, id пользователя=={current_user.id}'
+            new_data_for_items_id = []
+            items_id = order.items_id.split(DIVISOR)
+            summ = 0
+            for index in range(len(items_id)):
+                price = session.query(Item).filter(Item.id == items_id[index]).first().price
+                new_data_for_items_id.append(
+                    f'{items_id[index]}/{form_data[0][index]}/{price}/{form_data[0][index] * price}')
+                summ += form_data[0][index] * price
+            new_data_for_items_id.append(str(summ))
+            order.items_id = DIVISOR.join(new_data_for_items_id)
+            user = session.query(User).filter(User.id == current_user.id).first()
+            order = Order(items_id='', status='подготовка', is_finished=False)
+            session.add(order)
+            session.commit()
+            user.order_id = order.id
+            user.surname = order_registration_form.surname.data
+            user.name = order_registration_form.name.data
+            user.email = order_registration_form.email.data
+            user.phone_number = order_registration_form.phone_number.data
+            user.address = order_registration_form.address.data
+            user.postal_code = order_registration_form.postal_code.data
+            session.commit()
+            return render_template('success_order_registration.html')
+        else:
+            user = session.query(User).filter(User.id == current_user.id).first()
+            order_registration_form.surname.data = user.surname
+            order_registration_form.name.data = user.name
+            order_registration_form.email.data = user.email
+            order_registration_form.phone_number.data = user.phone_number
+            order_registration_form.address.data = user.address
+            order_registration_form.postal_code.data = user.postal_code
+            return render_template('order_registration.html', items=items, err=True,
+                                   length=length, form=order_registration_form)
+    return render_template('view_items_in_order.html', items=items, form=form,
+                           length=length, count=need_count, summ=order_summ)
+
+
+@login_required
+@app.route('/order/delete/<item_id>')
+def delete_item_from_order(item_id):
+    session = db_session.create_session()
+    order = session.query(Order).filter(
+        Order.id == current_user.order_id).first()
+    items = order.items_id.split(DIVISOR)
+    new_items = []
+    for item in items:
+        if item != item_id:
+            new_items.append(item)
+    items = DIVISOR.join(new_items)
+    order.items_id = items
+    session.commit()
+    return '<script>document.location.href = document.referrer</script>'
+
+
+@login_required
+@app.route('/order/<item_id>')
+def add_item_to_order(item_id):
+    session = db_session.create_session()
+    item = find_item_by_id(item_id)
+    if item:
+        order = session.query(Order).filter(
+            Order.id == current_user.order_id).first()
+        if order.items_id:
+            items = order.items_id.split(DIVISOR)
+            if item_id not in items:
+                items.append(item_id)
+                items = DIVISOR.join(items)
+                order.items_id = items
+                session.commit()
+        else:
+            order.items_id = item_id
+            session.commit()
+    return '<script>document.location.href = document.referrer</script>'
+
+
+@app.route('/view/<int:item_id>')
+def view_item(item_id):
+    item = find_item_by_id(item_id)
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+    if country:
+        item.country_id = country['Country'].get('title', 'Неизвестно')
+    authors_id = [int(author_id) for author_id in item.author_id.split(DIVISOR)]
+    authors_titles = []
+    for author_id in authors_id:
+        author_of_item = get(API_SERVER + f'/types/{author_id}').json()
+        if 'error' not in author_of_item:
+            authors_titles.append(author_of_item['Authors'].get('title', 'Неизвестно'))
+    item.author_id = ', '.join(authors_titles)
+    return render_template('view_item.html', item=item)
+
+
+@app.route('/view/image')
+def view_image():
+    link = request.args.get('img', default=None)
+    return render_template('view_image.html', link=link)
+
+
+@login_required
+@app.route('/favourites/<item_id>')
+def add_item_to_favourites(item_id):
+    session = db_session.create_session()
+    item = find_item_by_id(item_id)
+    if item:
+        favourite_items = session.query(FavouriteItems).filter(
+            FavouriteItems.id == current_user.favourite_id).first()
+        current_user.favourite_id = favourite_items.id
+        if favourite_items.items_id:
+            items = favourite_items.items_id.split(DIVISOR)
+            if item_id not in items:
+                items.append(item_id)
+                items = DIVISOR.join(items)
+                favourite_items.items_id = items
+                session.commit()
+        else:
+            favourite_items.items_id = item_id
+            session.commit()
+    return '<script>document.location.href = document.referrer</script>'
+
+
+@login_required
+@app.route('/favourites/delete/<item_id>')
+def delete_item_from_favourites(item_id):
+    session = db_session.create_session()
+    favourite_items = session.query(FavouriteItems).filter(
+        FavouriteItems.id == current_user.favourite_id).first()
+    items = favourite_items.items_id.split(DIVISOR)
+    new_items = []
+    for item in items:
+        if item != item_id:
+            new_items.append(item)
+    items = DIVISOR.join(new_items)
+    favourite_items.items_id = items
+    session.commit()
+    return '<script>document.location.href = document.referrer</script>'
+
+
+@login_required
+@app.route('/favourites')
+def view_favourites():
+    session = db_session.create_session()
+    favourites = session.query(FavouriteItems).filter(
+        FavouriteItems.id == current_user.favourite_id).first()
+    items_id_in_favourites = favourites.items_id.split(';')
+    items = find_items_by_id(items_id_in_favourites)
+    return render_template('view_items_in_favourites.html', items=items)
+
+
+@login_required
+@administrator_required
+@app.route('/add_item', methods=['GET', 'POST'])
+def add_item():
+    form = AddItemForm()
+    if form.errors:
+        print(form.errors)
+    if form.validate_on_submit():
+        session = db_session.create_session()
+        if (session.query(Item).filter(Item.title == form.title.data).first()):
+            return render_template('add_item.html', title='Добавление товара',
+                                   form=form, message='Такой товар уже есть')
+        country = session.query(Country).filter(Country.title == form.country.data).first()
+        if country is None:
+            country = Country(title=form.country.data)
+            session.add(country)
+            session.commit()
+            country = session.query(Country).filter(
+                Country.title == form.country.data).first()
+        author = session.query(Author).filter(Author.name == form.author.data).first()
+        if author is None:
+            author = Author(title=form.country.data)
+            session.add(author)
+            session.commit()
+            author = session.query(Author).filter(
+                Author.name == form.author.data).first()
+        country_id = country.id
+        author_id = author.id
+        images = request.files.getlist('images')
+        file_names = ';'.join(save_images(images))
+        item = Item(
+            title=form.title.data,
+            description=form.description.data,
+            images_links=file_names,
+            price=form.price.data,
+            country_id=country_id,
+            author_id=author_id,
+        )
+        session.add(item)
+        session.commit()
+        return redirect('/')
+    return render_template('add_item.html', title='Добавление товара', form=form)
+
+
+@login_required
+@administrator_required
+@app.route('/<int:item_id>', methods=['GET', 'POST'])
+def edit_item(item_id):
+    form = AddItemForm()
+    if request.method == "GET":
+        session = db_session.create_session()
+        item = session.query(Item).filter(Item.id == item_id).first()
+        if item:
+            form.title.data = item.title
+            form.description.data = item.description
+            form.price.data = item.price
+            country = session.query(Country).filter(Country.title == item.country_id).first()
+            form.country.data = country
+            author = session.query(Author).filter(Author.name == item.author_id).first()
+            form.author.data = author
+        else:
+            abort(404)
+    if form.validate_on_submit():
+        session = db_session.create_session()
+        item = session.query(Item).filter(Item.id == item_id).first()
+        if item:
+            country = session.query(Country).filter(Country.title == form.country.data).first()
+            if country is None:
+                country = Country(title=form.country.data)
+                session.add(country)
+                session.commit()
+                country = session.query(Country).filter(Country.title == form.country.data).first()
+            country_id = country.id
+            author = session.query(Author).filter(Author.name == item.author_id).first()
+            if author is None:
+                author = Author(title=form.author.data)
+                session.add(author)
+                session.commit()
+                author = session.query(Author).filter(Author.name == item.author_id).first()
+            author_id = author.id
+            images = request.files.getlist('images')
+            file_names = ';'.join(save_images(images))
+            item.title = form.title.data
+            item.images_links = file_names
+            item.description = form.description.data
+            item.images_links = file_names
+            item.price = form.price.data
+            item.country = country_id
+            item.author = author_id
+            session.commit()
+            return redirect('/')
+        else:
+            abort(404)
+    return render_template('add_item.html', title='Редактирование ткани', form=form)
+
+
+@login_required
+@administrator_required
+@app.route('/delete/<int:item_id>', methods=['GET', 'POST'])
+def delete_item(item_id):
+    delete(API_SERVER + f'/items/{item_id}', json={'api_key': 'r651I45H5P3Za45s'})
+    return redirect('/')
 
 
 @app.errorhandler(404)

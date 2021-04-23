@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 id="title_of_item">{{ item.title }}</h2>
+<input class="btn btn-primary" type="button" onclick="history.back();" value="Назад"/><br>
+<br><img src="{{ item.get_images(False) }}" alt="None"><br>
+{% for image in item.get_images(True) %}
+{% if loop.index0 != 0 %}
+<a class="buttons" href="/view/image?img={{ image }}">Изображение {{ loop.index0 }}</a>
+{% endif %}
+{% endfor %}<br>
+{{ item.description }}<br>
+Цена за 1 штуку: {{ item.price }} р.<br>
+Автор: {{item.author_id}}<br>
+Страна: {{ item.country_id }}<br>
+{% if current_user.is_authenticated %}
+<a class="btn btn-primary " href="/favourites{{ item.get_url() }}">Добавить в избранное</a>
+<a class="btn btn-primary " href="/order{{ item.get_url() }}">Добавить в заказ</a>
+{% endif %}
+{% endblock %}
