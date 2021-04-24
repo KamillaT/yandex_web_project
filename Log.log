@@ -385,3 +385,713 @@ jinja2.exceptions.TemplateNotFound: view_items_in_favourites.html
 2021-04-23 21:29:57,380 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:57] "[35m[1mGET /favourites HTTP/1.1[0m" 500 -
 2021-04-23 21:29:59,287 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:59] "[32mGET /logout HTTP/1.1[0m" 302 -
 2021-04-23 21:29:59,298 INFO werkzeug 127.0.0.1 - - [23/Apr/2021 21:29:59] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 15:33:49,787 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 15:33:54,632 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:33:54] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 15:33:54,849 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:33:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 15:33:56,154 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:33:56] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-24 15:33:58,829 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:33:58] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-24 15:33:58,848 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:33:58] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 15:34:00,279 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:00] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 15:34:01,404 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:01] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-24 15:34:02,863 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:02] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 15:34:04,347 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:04] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-24 15:34:04,354 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:04] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 15:34:05,800 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:05] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-24 15:34:11,559 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-24 15:34:11,579 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:11] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 15:34:14,264 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:14] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 15:34:15,140 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:15] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-24 15:34:16,170 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:16] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 15:34:18,378 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:18] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-24 15:34:18,386 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:34:18] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 15:54:29,575 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 15:54:32,524 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:32] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 15:54:32,904 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 15:54:33,993 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:33] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-24 15:54:37,564 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-24 15:54:37,580 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:37] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 15:54:38,577 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:38] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 15:54:40,258 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:40] "[37mGET /add_item HTTP/1.1[0m" 200 -
+2021-04-24 15:54:47,816 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:47] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-24 15:54:47,823 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 15:54:47] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 16:40:25,981 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 16:40:29,113 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:29] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 16:40:29,406 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 16:40:31,484 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:31] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-24 16:40:35,341 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-24 16:40:35,358 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:35] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 16:40:36,844 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:36] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 16:40:37,832 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:37] "[37mGET /order HTTP/1.1[0m" 200 -
+2021-04-24 16:40:40,077 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:40] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 16:40:45,320 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:45] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 16:40:46,748 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:46] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-24 16:40:47,750 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:47] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 16:40:50,305 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:50] "[32mGET /logout HTTP/1.1[0m" 302 -
+2021-04-24 16:40:50,316 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 16:40:50] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 17:06:39,689 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 17:06:44,356 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:06:44] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:06:44,362 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    cash_data_for_country[item.country_id] = country['Country'].get('title', 'Íåèçâåñòíî')
+KeyError: 'Country'
+2021-04-24 17:06:44,379 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:06:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:06:44,600 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:06:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:09:40,622 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 17:09:44,015 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:44] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:09:44,019 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    cash_data_for_country[item.country_id] = country[1].get('title', 'Íåèçâåñòíî')
+KeyError: 1
+2021-04-24 17:09:44,020 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:09:44,131 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:09:44,720 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:44] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:09:44,724 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    cash_data_for_country[item.country_id] = country[1].get('title', 'Íåèçâåñòíî')
+KeyError: 1
+2021-04-24 17:09:44,725 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:09:44,823 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:09:45,035 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:45] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:09:45,041 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    cash_data_for_country[item.country_id] = country[1].get('title', 'Íåèçâåñòíî')
+KeyError: 1
+2021-04-24 17:09:45,044 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:09:45,123 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:09:45,270 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:45] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:09:45,275 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    cash_data_for_country[item.country_id] = country[1].get('title', 'Íåèçâåñòíî')
+KeyError: 1
+2021-04-24 17:09:45,277 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:45] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:09:45,378 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:09:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:11:04,759 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 17:11:08,741 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:08] "[37mGET /register HTTP/1.1[0m" 200 -
+2021-04-24 17:11:10,223 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:10] "[37mGET /login HTTP/1.1[0m" 200 -
+2021-04-24 17:11:13,986 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:13] "[32mPOST /login HTTP/1.1[0m" 302 -
+2021-04-24 17:11:14,021 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:14] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:11:14,027 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    cash_data_for_country[item.country_id] = country[1].get('title', 'Íåèçâåñòíî')
+KeyError: 1
+2021-04-24 17:11:14,037 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:14] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:11:19,337 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:19] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 17:11:41,830 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:41] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 17:11:42,144 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:11:43,014 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:43] "[37mGET /favourites HTTP/1.1[0m" 200 -
+2021-04-24 17:11:45,005 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:45] "[37mGET /user_profile HTTP/1.1[0m" 200 -
+2021-04-24 17:11:48,107 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:48] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:11:48,109 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    cash_data_for_country[item.country_id] = country[1].get('title', 'Íåèçâåñòíî')
+KeyError: 1
+2021-04-24 17:11:48,110 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:11:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:16:13,103 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 17:16:15,928 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:16:15] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:16:15,932 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    cash_data_for_country[item.country_id] = country["Country"].get('title', 'Íåèçâåñòíî')
+KeyError: 'Country'
+2021-04-24 17:16:15,933 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:16:15] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:16:16,054 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:16:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:26:38,682 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 17:26:47,871 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:26:47] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:26:47,874 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 343, in main_page
+    cash_data_for_country[item.country_id] = country["Country"].get('title', 'Íåèçâåñòíî')
+KeyError: 'Country'
+2021-04-24 17:26:47,877 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:26:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 17:26:47,917 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:26:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:28:46,822 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 17:28:48,683 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:28:48] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 17:28:48,845 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:28:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 17:33:32,729 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 17:33:37,149 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:33:37] "[33mGET //countries/1 HTTP/1.1[0m" 404 -
+2021-04-24 17:33:37,166 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:33:37] "[37mGET / HTTP/1.1[0m" 200 -
+2021-04-24 17:33:37,294 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 17:33:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 18:12:42,458 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 18:12:48,226 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 343, in main_page
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2021-04-24 18:12:48,266 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 18:12:48] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 18:12:48,363 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 18:12:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 18:13:36,376 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 18:13:39,803 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask_restful\__init__.py", line 272, in error_router
+    return original_handler(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\PycharmProjects\shop_project\main.py", line 342, in main_page
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\models.py", line 900, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2021-04-24 18:13:39,816 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 18:13:39] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 18:13:39,908 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 18:13:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 20:32:28,008 INFO werkzeug  * Running on http://127.0.0.1:8080/ (Press CTRL+C to quit)
+2021-04-24 20:32:33,943 ERROR werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:33] code 400, message Bad request version ('}+HE\xfb\xee\x14\xe1±\xdcB\xa2z\x9c\xe1\xd0$7\x15<\x8d"k\xd4"\x00V\x13\x02\x13\x03\x13\x01\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8\x00\x9f\x00\x9e\xcc\xaa\xc0\xaf\xc0\xad\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0\'\xc0')
+2021-04-24 20:32:33,944 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:33] "[35m[1m  \xfch5\xf2¬m\xe5\xbd\xeb\xaf\xfb\x88\x86\xd0&G\xed#_\xcd1Q\xeeu0\xea \xde\x83 \x90}+HE\xfb\xee\xe1±\xdcB\xa2z\x9c\xe1\xd0$7<\x8d"k\xd4" V\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8 \x9f \x9e\xcc\xaa\xc0\xaf\xc0­\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0[0m" HTTPStatus.BAD_REQUEST -
+2021-04-24 20:32:33,944 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\Documents\GitHub\yandex_web_project\main.py", line 342, in main_page
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+2021-04-24 20:32:33,971 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 20:32:34,063 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 20:32:34,980 ERROR werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:34] code 400, message Bad request version ("y\xbf\x11\xe3ML\x88D\xf5\x18\x8c$\xdb\xd6\xb9W\xaf26s\x990>\xc6<0&\x93\xb9\xcf¤\xda\x00V\x13\x02\x13\x03\x13\x01\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8\x00\x9f\x00\x9e\xcc\xaa\xc0\xaf\xc0\xad\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0")
+2021-04-24 20:32:34,980 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:34] "[35m[1m  \xfc [\xc4\xe7©G\x86G\xa2's\x85(\x96\xe3\xe8\x99GAp}8\x85\xd6«AO\xc9\xc1 y\xbf\xe3ML\x88D\xf5\x8c$\xdb\xd6\xb9W\xaf26s\x990>\xc6<0&\x93\xb9\xcf¤\xda V\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8 \x9f \x9e\xcc\xaa\xc0\xaf\xc0­\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0[0m" HTTPStatus.BAD_REQUEST -
+2021-04-24 20:32:34,981 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\Documents\GitHub\yandex_web_project\main.py", line 342, in main_page
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+2021-04-24 20:32:34,983 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:34] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 20:32:35,018 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 20:32:35,258 ERROR werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] code 400, message Bad request version ("\xec\x93\xa3\x8c\x11\x00V\x13\x02\x13\x03\x13\x01\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8\x00\x9f\x00\x9e\xcc\xaa\xc0\xaf\xc0\xad\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0")
+2021-04-24 20:32:35,258 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[35m[1m  \xfc\xdcc\xd3\xea\xe5\xaal\xc3*m\x9a\x81"\xc4¶<¤\xe0R\x88\xb8S\xc5\x96\xdb\xd0\x84"\xf5\xea l\xf7tK\x82\xc9brb\xb4Us\xe5\x90\xdbv\xf9I<r\x8f\x86 \xec\x93\xa3\x8c V\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8 \x9f \x9e\xcc\xaa\xc0\xaf\xc0­\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0[0m" HTTPStatus.BAD_REQUEST -
+2021-04-24 20:32:35,259 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\Documents\GitHub\yandex_web_project\main.py", line 342, in main_page
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+2021-04-24 20:32:35,261 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 20:32:35,306 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 20:32:35,521 ERROR werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] code 400, message Bad request version ("\xbd\xd8$\x00V\x13\x02\x13\x03\x13\x01\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8\x00\x9f\x00\x9e\xcc\xaa\xc0\xaf\xc0\xad\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0")
+2021-04-24 20:32:35,521 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[35m[1m  \xfc\xba\xa3\x85\xc9\xb9G \x8a\x9d\xe7W\x8c^\xd8|\xcf\xd8\xd2X\x98\xaa\xffF\xbey{\xdc\x9a \xdfF\x9e\xddg\x8b\xc7$?W\xe8\x9b\xaf\x96\x86\xfag"\xfd\xf8\xbd\xd8$ V\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8 \x9f \x9e\xcc\xaa\xc0\xaf\xc0­\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0[0m" HTTPStatus.BAD_REQUEST -
+2021-04-24 20:32:35,522 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\Documents\GitHub\yandex_web_project\main.py", line 342, in main_page
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+2021-04-24 20:32:35,523 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 20:32:35,559 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 20:32:35,774 ERROR werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] code 400, message Bad request version ("\x88\xfb\x96«\xc9\x10\x05µ\x95\x84*^\xf3\xd6\xd0\x0eE\xe6\xfa\xbfN\xb93}\xbaU\xf6\xbf\x00V\x13\x02\x13\x03\x13\x01\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8\x00\x9f\x00\x9e\xcc\xaa\xc0\xaf\xc0\xad\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0")
+2021-04-24 20:32:35,774 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[35m[1m  \xfc°\xcf¶d\x89q±9\xaf\xb9\xda\xe8±µ\xd3\xbd\xe5®#\xe9\xf4w\xea\xbcD\x91g i\x86J\x88\xfb\x96«\xc9µ\x95\x84*^\xf3\xd6\xd0E\xe6\xfa\xbfN\xb93}\xbaU\xf6\xbf V\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8 \x9f \x9e\xcc\xaa\xc0\xaf\xc0­\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0[0m" HTTPStatus.BAD_REQUEST -
+2021-04-24 20:32:35,775 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\Documents\GitHub\yandex_web_project\main.py", line 342, in main_page
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+2021-04-24 20:32:35,777 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 20:32:35,806 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2021-04-24 20:32:35,968 ERROR werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] code 400, message Bad request version ('\x1b\x8c\xc6C¦\xf6S\xdf\xffm\xc0\xd2%r\x96\x9e\x15"\xe8"\x89tZ\x94§c8,m§¶{\x00V\x13\x02\x13\x03\x13\x01\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8\x00\x9f\x00\x9e\xcc\xaa\xc0\xaf\xc0\xad\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0\'\xc0')
+2021-04-24 20:32:35,969 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[35m[1m  \xfc\xf6T\xdcSt\x8bF|\xec\x96«5\xc0-B}b\x84\xbc\x8d¬I2\xe4\xd3 f \x8c\xc6C¦\xf6S\xdf\xffm\xc0\xd2%r\x96\x9e"\xe8"\x89tZ\x94§c8,m§¶{ V\xc0,\xc00\xc0+\xc0/\xcc©\xcc\xa8 \x9f \x9e\xcc\xaa\xc0\xaf\xc0­\xc0®\xc0¬\xc0$\xc0(\xc0#\xc0'\xc0[0m" HTTPStatus.BAD_REQUEST -
+2021-04-24 20:32:35,969 ERROR main Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLError: [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\GF63\Documents\GitHub\yandex_web_project\main.py", line 342, in main_page
+    country = get(API_SERVER + f'/countries/{item.country_id}').json()
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GF63\AppData\Local\Programs\Python\Python39\lib\site-packages\requests\adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='127.0.0.1', port=8080): Max retries exceeded with url: /countries/1 (Caused by SSLError(SSLError(1, '[SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:1122)')))
+2021-04-24 20:32:35,971 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2021-04-24 20:32:35,996 INFO werkzeug 127.0.0.1 - - [24/Apr/2021 20:32:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

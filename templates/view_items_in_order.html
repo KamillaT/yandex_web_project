@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h1 align="center">Ваш заказ</h1><br>
-<a class="btn btn-primary" href='/'>Назад</a><br>
+<a class="btn btn-primary" href='/user_profile'>Назад</a><br>
 <form action="" method="post" novalidate style="margin-left: 50px;" enctype="multipart/form-data">
     {{ form.hidden_tag() }}
     {% for cloth_index in length %}

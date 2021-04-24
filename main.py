@@ -1,10 +1,12 @@
 # -*- coding: utf8 -*-
 import datetime
+import json
 import logging
 
 from PIL import Image
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 from flask import Flask, redirect, render_template, request, abort, make_response, jsonify
+from flask_restful import Api
 from werkzeug.security import check_password_hash
 from wtforms.fields.html5 import EmailField, SearchField
 from data import db_session, users, favourite
@@ -22,6 +24,7 @@ from data.authors import Author
 from data.countries import Country
 from requests import get, put, delete
 from data.validators import CheckStringFieldByDigit
+from resources import all_recources
 
 LOG_FILE = 'Log.log'  # имя файла с логами сервера
 CONFIG_FILE = 'config.txt'  # имя файла с настроками сайта
@@ -73,14 +76,10 @@ class SearchForm(FlaskForm):
     items_countries = {str(key_id): 0 for key_id in range(1, countries_length + 1)}
     items = session.query(Item).all()
     for item in items:
-        item_authors = item.author_id.split(';')
-        items_country = item.country_id.split(';')
-        for _author in item_authors:
-            items_authors[_author] += 1
-        for _country in items_country:
-            items_countries[_country] += 1
+        item_authors = item.author_id
+        items_country = item.country_id
     for author_ in session.query(Author).all():
-        authors.append((author_.id, author_.title + f': {items_authors[str(author_.id)]}'))
+        authors.append((author_.id, author_.name + f': {items_authors[str(author_.id)]}'))
     for country_ in session.query(Country).all():
         countries.append((country_.id, country_.title + f': {items_countries[str(country_.id)]}'))
     text = SearchField('Введите поисковый запрос')
@@ -121,10 +120,22 @@ class AddItemForm(FlaskForm):
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "yandexlyceum_secret_key"
 db_session.global_init(f'db/{DB_NAME}.sqlite')
-API_SERVER = "http://127.0.0.1:8080/"
-
 login_manager = LoginManager()
 login_manager.init_app(app)
+# api = Api(app)
+# api.add_resource(all_recources.UserListResource, '/api/users')
+# api.add_resource(all_recources.UserResource, '/api/users/<int:object_id>')
+# api.add_resource(all_recources.FavouriteItemsListResource, '/api/favourites')
+# api.add_resource(all_recources.FavouriteItemsResource, '/api/favourites/<int:object_id>')
+# api.add_resource(all_recources.ItemListResource, '/api/cloths')
+# api.add_resource(all_recources.ItemResource, '/api/cloths/<int:object_id>')
+# api.add_resource(all_recources.CountryListResource, '/api/countries')
+# api.add_resource(all_recources.CountryResource, '/api/countries/<int:object_id>')
+# api.add_resource(all_recources.OrderListResource, '/api/orders')
+# api.add_resource(all_recources.OrderResource, '/api/orders/<int:object_id>')
+# api.add_resource(all_recources.AuthorListResource, '/api/author')
+# api.add_resource(all_recources.AuthorResource, '/api/author/<int:object_id>')
+API_SERVER = 'https://127.0.0.1:8080'
 
 
 def administrator_required(page_function):
@@ -308,7 +319,7 @@ def main_page(form_data=[]):
         temp = []
         for item in items:
             country_id = item.country_id.split(DIVISOR)
-            if str(country_id) in country_id and item.id in items_id:
+            if country_id in country_id and item.id in items_id:
                 temp.append(item)
         items = temp.copy()
         items_id = [item.id for item in items]
@@ -532,7 +543,7 @@ def add_item():
         print(form.errors)
     if form.validate_on_submit():
         session = db_session.create_session()
-        if (session.query(Item).filter(Item.title == form.title.data).first()):
+        if session.query(Item).filter(Item.title == form.title.data).first():
             return render_template('add_item.html', title='Добавление товара',
                                    form=form, message='Такой товар уже есть')
         country = session.query(Country).filter(Country.title == form.country.data).first()
