@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Профиль пользователя</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Профиль пользователя {{ current_user.name }}</h1>
+    <p>Имя: {{ current_user.name }}</p>
+    <p>Почта: {{ current_user.email }}</p>
+    <p>Адрес: {{ current_user.address }}</p>
+    <p>Перейти в корзину: <a class="btn btn-warning" href="/cart/{{ current_user.email }}">МОЯ КОРЗИНА</a></p>
+</div>
+{% endblock %}

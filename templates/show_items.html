@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Товары</title>
+{% endblock %}
+
+{% block body %}
+<h2 style="color:red">{{ item }}</h2>
+<p><a class="btn btn-outline-warning" href="/">Назад</a></p>
+{% if current_user.role == 'Администратор' %}
+<a class="btn btn-warning" href="/create_item/{{ name }}">Добавить товар</a>
+{% endif %}
+{% if current_user.is_authenticated == False %}
+<p style="font-size: 20px">Чтобы купить товар, <a href="/login">войдите</a> или <a href="/registration">зарегистрируйтесь</a>
+    на сайте</p>
+{% endif %}
+{% for key in items.keys(): %}
+<div>
+    <p>{{ key }} {{items[key]}} руб.
+        {% if current_user.is_authenticated %}
+        <a href="/buy/{{ name }}/{{ keys[key] }}" type="button" class="w-100 btn btn-lg btn-outline-primary">Купить
+            товар</a>
+        <a href="/add_to_cart/{{ current_user.email }}/{{ name }}/{{ keys[key] }}" type="button"
+           class="w-100 btn btn-lg btn-outline-primary">Добавить в корзину</a>
+        {% if current_user.role == 'Администратор' %}
+        <a class="btn btn-danger" href="/delete_item/{{ name }}/{{ keys[key] }}">Удалить товар</a>
+        {% endif %}
+        {% endif %}
+    </p>
+</div>
+{% endfor %}
+{% endblock %}

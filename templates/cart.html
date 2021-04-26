@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<p style="color:red">После оплаты вернитесь в корзину и обновите страницу</p>
+{% for key in items.keys() %}
+<p>{{ items[key] }} {{ prices[key] }}руб.
+    <a class="btn btn-danger" href="/cart/{{ current_user.email }}/delete/{{ key }}">Удалить товар из корзины</a>
+</p>
+{% endfor %}
+<div align="right">
+<p>Всего к оплате: {{ total_price }} руб.</p>
+<p><a class="btn btn-primary" href="/buy/{{ current_user.email }}/{{ total_price }}">Оплатить</a></p>
+</div>
+{% endblock %}

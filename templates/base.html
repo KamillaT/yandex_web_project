@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    {% block title %}{% endblock %}
+</head>
+<body style="background-color:black; color:white">
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="check" viewBox="0 0 16 16">
+        <title>Check</title>
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+    </symbol>
+</svg>
+
+<div class="container py-3">
+    <header class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        </a>
+
+        <img src="/static/img/352.jpg">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Wild Cat</h5>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+            {% if current_user.is_authenticated %}
+            <nav>
+                <a class="btn btn-outline-warning" href="/user_profile">Профиль пользователя</a>
+                <a class="btn btn-outline-warning" href="/logout">Выйти</a>
+            {% else %}
+            <nav>
+                <a class="btn btn-outline-warning" href="/registration">Зарегистрироваться</a>
+                <a class="btn btn-outline-warning" href="/login">Войти</a>
+            </nav>
+            {% endif %}
+            <a class="p-2 text-light" href="/">Главная</a>
+            <a class="p-2 text-light" href="/about">Про магазин</a>
+        </nav>
+    </header>
+
+    {% block body %}{% endblock %}
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-12 col-md">
+                <p><small class="d-block mb-3 text-muted">© 2021 ООО "Wild Cat"</small>
+                All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+</body>
+</html>

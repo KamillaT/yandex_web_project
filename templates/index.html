@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Онлайн-магазин</title>
+{% endblock %}
+
+{% block body %}
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal">ROCK MUSIC SHOP</h1>
+        <p class="fs-5 text-muted">Выберите исполнителя или группу, чтобы посмотреть перечень товаров.</p>
+    </div>
+
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+    {% for el in data %}
+    <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3" style="background-color:#404040">
+                        <h4 class="my-0 fw-normal">{{ el.title }}</h4>
+                    </div>
+                    <div class="card-body" style="background-color:#484848">
+                        <h1 class="card-title pricing-card-title">{{ el.price }}<small class="text-muted fw-light"></small></h1>
+                        <a href="/show_items/{{ el.id }}" type="button" class="w-100 btn btn-lg btn-outline-warning">Посмотреть товары</a>
+                    </div>
+                </div>
+    {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
